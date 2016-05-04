@@ -270,12 +270,12 @@ if ( ! function_exists( 'tsumiki_logo' ) ) {
 /**
  * the_excerpt
  */
-function new_excerpt_mblength($length) {
+function tsumiki_excerpt_mblength($length) {
      return 30;
 }
-add_filter('excerpt_mblength', 'new_excerpt_mblength');
+add_filter('excerpt_mblength', 'tsumiki_excerpt_mblength');
 
-function new_excerpt_more($more) {
+function tsumiki_excerpt_more($more) {
 	return '...';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'tsumiki_excerpt_more');
