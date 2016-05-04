@@ -11,28 +11,28 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function tsumiki_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport				 = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport	= 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-  //logo upload
-  $wp_customize->add_setting(
-    'logo_image' , array(
-      'default'     => '',
-      'sanitize_callback' => 'esc_url_raw',
-      ));
+	//logo upload
+	$wp_customize->add_setting(
+		'logo_image' , array(
+			'default'		 => '',
+			'sanitize_callback' => 'esc_url_raw',
+			));
 
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control(
-      $wp_customize,
-      'logo_image',
-      array(
-        'label' => __( 'Logo Image', 'tsumiki' ),
-        'section' => 'title_tagline',
-        'settings' => 'logo_image',
-      )
-    )
-  );
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'logo_image',
+			array(
+				'label' => __( 'Logo Image', 'tsumiki' ),
+				'section' => 'title_tagline',
+				'settings' => 'logo_image',
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'tsumiki_customize_register' );
 

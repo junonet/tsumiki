@@ -2,21 +2,20 @@
  * Animating Scroll In MDL
  */
 var scrollTo = function(top) {
-  var content = $(".mdl-layout__content");
-  var target = top ? 0 : $(".page-content").height();
-  content.stop().animate({ scrollTop: target }, "slow");
+	var content = $(".mdl-layout__content");
+	var target = top ? 0 : $(".page-content").height();
+	content.stop().animate({ scrollTop: target }, "slow");
 };
 
 var scrollToTop = function() {
-  scrollTo(true);
+	scrollTo(true);
 };
 
 var scrollToBottom = function() {
-  scrollTo(false);
+	scrollTo(false);
 };
 
 $(function() {
-  $("#scroll-up-btn").click(scrollToTop);
-  $("#scroll-down-btn").click(scrollToBottom);
+	$("#scroll-up-btn").click(scrollToTop);
+	$("#scroll-down-btn").click(scrollToBottom);
 });
-
