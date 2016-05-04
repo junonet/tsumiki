@@ -1,0 +1,10 @@
+/*
+Theme Name: Tsumiki
+Theme URI: http://underscores.me/
+Author: taizo fujita
+Author URI: http://junonet.biz/
+*/
+
+@import url( '../underscores.css' );
+@import url( '/mdl/material.min.css' );
+@import url( 'style.css' );
